@@ -1,0 +1,78 @@
+---
+title: "Laboratório de Ensino de Física"
+lang: pt-BR
+image: assets/img/identidade-visual/uftlabfis3.png
+about: 
+  template: jolla
+format: 
+  html: 
+    toc: false
+---
+
+```{r roteiros}
+#| include: false
+
+library(knitr)
+
+roteiros_df <- data.frame(
+  Área = character(),
+  Tema = character(),
+  URL  = character(),
+  stringsAsFactors = FALSE
+)
+  
+# Adicionar linhas com rbind
+roteiros_df <- rbind(
+  roteiros_df,
+  data.frame(
+    Área = "Instrumentação",
+    Tema = "Paquímetro",
+    URL = '<a href="src/instrumentacao/paquimetro.html" target="_blank">Ver roteiro</a>'
+  ),
+  data.frame(
+    Área = "Física 2",
+    Tema = "Queda Livre",
+    URL = '<a href="roteiros/queda-livre.html">Ver roteiro</a>'
+  ),
+  data.frame(
+    Área = "Física 2",
+    Tema = "Oscilações Harmômicas Simples",
+    URL = '<a href="src/fisica-2/massa-mola-mhs.html" target="_blank">Ver roteiro</a>'
+  ),
+  data.frame(
+    Área = "Física 3",
+    Tema = "Circuito RC",
+    URL = '<a href="roteiros/circuito-rc.html">Ver roteiro</a>'
+  ),
+  data.frame(
+    Área = "Física 4",
+    Tema = "Espectro de Emissão",
+    URL = '<a href="roteiros/espectro.html">Ver roteiro</a>'
+  )
+)
+
+# Ordenar a coluna "Área" com fator ordenado
+roteiros_df$Área <- factor(
+  roteiros_df$Área,
+  levels = c("Instrumentação", "Física 1", "Física 2", "Física 3", "Física 4")
+)
+
+roteiros_df <- roteiros_df[order(roteiros_df$Área), ]
+```
+
+
+
+O **Laboratório de Ensino de Física** da Universidade Federal do Tocantins (LABFIS) constitui um ambiente acadêmico voltado à promoção da formação científica e didático-pedagógica dos discentes dos cursos de Engenharia Ambiental, Engenharia Civil, Engenharia de Alimentos, Engenharia Elétrica e Licenciatura em Física (EaD).
+
+Sua estrutura é destinada ao desenvolvimento de atividades práticas, experimentais e investigativas que visam à articulação entre teoria e prática no processo de ensino-aprendizagem da Física. 
+
+
+## Roteiros e Experimentos
+
+```{r}
+#| echo: false
+kable(roteiros_df, escape = FALSE, align = c("l", "l", "c"))
+```
+
+
+

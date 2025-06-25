@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "**UFTLABFIS**"
+  navbar:
+    left:
+      - href: index.qmd
+        text: "Página Inicial"
+  page-footer:
+    left: |
+      <div><img src="/assets/img/identidade-visual/uftlabfis3.png" alt="Logo LABFIS" class="labfis-logo"></div>
+      <div><strong>Endereço:</strong> <a href="https://maps.app.goo.gl/DBYj96UkxcoRs2CPA" target="_blank">Câmpus de Palmas, Avenida NS-15, ALCNO-14, Bloco II, Salas 10 e 10A</a></div>
+      <div><strong>Telefone:</strong> (63) 3229-4766</div>
+      <div><strong>E-mail:</strong> <a href="mailto:labfis.cup@uft.edu.br">labfis.cup@uft.edu.br</a></div>
+      <div><strong>Atendimento:</strong> Seg a Sex, 8h às 12h e das 14h às 18h</div>
+    
+    right: |
+      <div class="linha"></div>
+      <div>&copy; Copyright <strong>UFTLabfis</strong> Todos os direitos reservados</div>
+      <div><strong>Desenvolvido por:</strong> Igo da Costa Andrade (Físico)</div>
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css:
+      - assets/css/styles.css
+    toc: true
+
+
+

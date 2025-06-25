@@ -1,0 +1,32 @@
+# Arquivos e pastas gerados automaticamente
+_site/
+docs/
+
+# Arquivos temporários
+*.log
+*.aux
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de backup
+*~
+*.swp
+*.bak
+
+# Arquivos de cache do Quarto
+.quarto
+
+# Arquivos de configuração locais (opcional)
+.Rhistory
+.RData
+.Rproj.user/
+
+# Notebooks temporários (caso use Python/Ju

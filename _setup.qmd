@@ -1,0 +1,6 @@
+```{r}
+# Chunk de setup global (executado antes de todas as páginas)
+library(tidyverse)
+library(ggplot2)
+library(knitr)
+library(kableExtra)

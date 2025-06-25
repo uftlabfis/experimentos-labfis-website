@@ -1,0 +1,44 @@
+---
+title: "Roteiro Experimental: Paquímetro"
+lang: pt-BR
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    toc: true
+  pdf:
+    documentclass: article
+    template: ../../_templates/latex/template.tex
+    toc: false
+    number-sections: true
+---
+
+# Introdução
+
+O paquímetro é um instrumento utilizado para medir com precisão dimensões internas, externas e profundidades de objetos...
+
+# Objetivos
+
+- Compreender o funcionamento do paquímetro;
+- Aprender a realizar medições precisas;
+- Analisar as fontes de erro na medição.
+
+# Materiais
+
+- Paquímetro;
+- Objetos para medição (ex: blocos, tubos);
+
+# Procedimentos
+
+1. Verificar a calibração do paquímetro.
+2. Medir a dimensão externa dos objetos.
+3. Medir a dimensão interna dos objetos.
+4. Medir a profundidade dos objetos.
+5. Anotar os resultados e calcular as incertezas.
+
+# Referências
+
+\bibliography{referencias}
+
+
