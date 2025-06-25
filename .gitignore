@@ -28,3 +28,5 @@ Thumbs.db
 .Rproj.user/
 
 # Notebooks temporários (caso use Python/Ju
+
+/.quarto/

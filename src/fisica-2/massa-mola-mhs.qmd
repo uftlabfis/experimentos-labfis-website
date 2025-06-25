@@ -1,43 +1,253 @@
 ---
-title: "Oscilações Harmônicas Simples: Sistema Massa-Mola"
+title: "Oscilações Harmônicas Simples"
 lang: pt-BR
 format:
   html:
+    math: mathjax
     theme:
       - cosmo
       - brand
     toc: true
   pdf:
     documentclass: article
-    template: ../../_templates/latex/template.tex
     toc: false
     number-sections: true
+    pdf-engine: lualatex
+    citation-package: biblatex
+    geometry: margin=2cm
+    fontsize: 12pt
+    include-in-header: ../preamble.tex
+    title-block: false
+bibliography: ../referencias.bib
+csl: ../abnt.csl
 ---
+
+```{=latex}
+\thispagestyle{empty}
+
+\noindent
+\textcolor{uftverde}{\rule{\textwidth}{1.5pt}}
+
+\vspace{0.2cm}
+
+\begin{minipage}[c]{0.6\textwidth}
+  \textbf{UNIVERSIDADE FEDERAL DO TOCANTINS}\\
+  CÂMPUS UNIVERSITÁRIO DE PALMAS\\
+  LABORATÓRIO DE ENSINO DE FÍSICA
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.4\textwidth}
+  \flushright
+  \includegraphics[width=0.25\textwidth]{../../assets/img/identidade-visual/uftlabfis.png}
+\end{minipage}
+
+\vspace{0.2cm}
+
+\noindent
+\textcolor{uftverde}{\rule{\textwidth}{1.5pt}}
+
+\vspace{0.5cm}
+
+\begin{center}
+  {\LARGE{Oscilações Harmônicas Simples}}
+\end{center}
+``` 
+
+
 
 # Introdução
 
-Considere uma massa $m$ conectada a uma mola ideal cuja constante elástica é igual a $k$, conforme mostra a Figura \ref{fig_1}. Este sistema é geralmente denominado \textbf{sistema massa-mola}. Inicialmente, a mola está em repouso e em posição de equilíbrio. O sistema está imersa em um meio, por exemplo o ar, cuja resistência ao movimento pode ser desprezada.
+
+O sistema massa-mola é um modelo fundamental para o estudo do movimento oscilatório na física clássica [@halliday2]. Consiste em uma massa $m$ presa a uma mola ideal, cuja força restauradora obedece à Lei de Hooke, dada por
+
+$$
+F = -kx,
+$$
+
+onde $k$ é a constante elástica da mola e $x$ representa o deslocamento da massa em relação à posição de equilíbrio.
+
+Aplicando a Segunda Lei de Newton ao sistema, obtemos a equação diferencial que descreve o movimento da massa:
+
+$$
+m \frac{d^2 x}{dt^2} + kx = 0,
+$$
+
+que é uma equação diferencial linear de segunda ordem com coeficientes constantes. Esta equação admite soluções harmônicas que representam oscilações periódicas da massa em torno da posição de equilíbrio [@halliday2].
+
+A solução geral do sistema é uma função do tempo $t$ que descreve um Movimento Harmônico Simples, com frequência angular $\omega$ dada por
+
+$$
+\omega = \sqrt{\frac{k}{m}}.
+$$
+
+Com isso, o período de oscilação $T$ é
+
+$$
+T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{m}{k}}.
+$$
+
+Na equação acima, isolando a constante elástica, temos:
+
+$$
+k = 4 \pi^2 \dfrac{m}{T^2}
+\tag{1}\label{eq_01}
+$$
+
+Dessa forma, conhecendo o período $T$ e a massa $m$, é possível determinar experimentalmente a constante elástica $k$ da mola, realizando um experimento que mede o tempo das oscilações.
+
 
 # Objetivos
 
-- Compreender o funcionamento do paquímetro;
-- Aprender a realizar medições precisas;
-- Analisar as fontes de erro na medição.
+* Determinar a constante elástica de uma mola por processo dinâmico;
+* Comparar diferentes métodos de determinação de constante elástica.
 
-# Materiais
+# Material Necessário
 
-- Paquímetro;
-- Objetos para medição (ex: blocos, tubos);
 
-# Procedimentos
 
-1. Verificar a calibração do paquímetro.
-2. Medir a dimensão externa dos objetos.
-3. Medir a dimensão interna dos objetos.
-4. Medir a profundidade dos objetos.
-5. Anotar os resultados e calcular as incertezas.
+```{=latex}
+\begin{minipage}{0.4\textwidth}
+\begin{figure}[H]
+	\centering
+	\caption{Aparato experimental}
+	\includegraphics[width=0.5\textwidth]
+	{../../assets/img/roteiros/fisica-2/massa-mola-mhs/equipamento.png}\label{fig_2}
+\end{figure}
+\end{minipage} \hfill
+\begin{minipage}{0.5\textwidth}
+\begin{itemize}
+	\item Mola e suporte para massas acopláveis;
+	\item 01 Massa acoplável;
+	\item Balança digital;
+	\item Cronômetro.
+\end{itemize}
+\end{minipage}
+```
+
+```{=html}
+<div style="display: flex; align-items: flex-start; gap: 1rem;">
+
+  <div style="flex: 0 0 40%; text-align: center;">
+    <figure>
+      <img 
+        src="../../assets/img/roteiros/fisica-2/massa-mola-mhs/equipamento.png" 
+        alt="Aparato experimental" 
+        style="width: 75%; height: auto;">
+      <figcaption style="margin-top: 0.5em;">
+        Aparato experimental
+      </figcaption>
+    </figure>
+  </div>
+
+  <div style="flex: 0 0 50%;">
+    <ul>
+      <li>Mola e suporte para massas acopláveis;</li>
+      <li>01 Massa acoplável;</li>
+      <li>Balança digital;</li>
+      <li>Cronômetro.</li>
+    </ul>
+  </div>
+
+</div>
+
+```
+
+# Andamento das Atividades
+
+1. Com a balança digital, meça o valor da massa a ser utilizada.
+
+```{=latex}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c}
+    \hline
+    \rowcolor{gray!30!} \textbf{Massa (kg)}\\ \hline
+    {\color{white} massa}\\ \hline	
+  \end{tabular}
+\end{table}
+```
+
+::: {.only-html}
+
+<table>
+  <caption><strong>Massa Medida</strong></caption>
+  <thead>
+    <tr>
+      <th style="text-align: center;">Massa (kg)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>&nbsp;</td></tr>
+  </tbody>
+</table>
+
+:::
+
+
+2. Cuidadosamente, coloque a massa sobre o suporte da mola.
+
+3. Desloque a massa $m$ aproximadamente 2 cm de sua posição de equilíbrio e solte-a.
+
+4. Com o cronômetro, meça o tempo $t$ para que a massa execute exatamente 10 oscilações completas. Anote esse valor na tabela abaixo.
+
+
+```{=latex}
+\begin{table}[H]
+\centering
+\caption{Dados do experimento}
+\begin{tabular}{c | c | c }
+	\hline
+	\rowcolor{gray!30!} Medida & Tempo de 10 oscilações ($t$) & Período $\left(T = \dfrac{t}{10}\right)$ \\ \hline
+	1 & & \\ \hline
+	\rowcolor{gray!30!} 2 & & \\ \hline
+	3 & & \\ \hline
+	\rowcolor{gray!30!} 4 & & \\ \hline
+	5 & & \\ \hline
+	\rowcolor{gray!30!} \multicolumn{2}{c |}{Valor médio de $T$ (s)} & \\ \hline
+\end{tabular}
+\label{tab-01}
+\end{table}
+```
+
+::: {.only-html}
+
+<table>
+  <caption><strong>Dados do experimento</strong></caption>
+  <thead>
+    <tr>
+      <th>Medida</th>
+      <th>Tempo de 10 oscilações ($t$)</th>
+      <th>Período $T = \dfrac{t}{10}$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td></td><td></td></tr>
+    <tr><td>2</td><td></td><td></td></tr>
+    <tr><td>3</td><td></td><td></td></tr>
+    <tr><td>4</td><td></td><td></td></tr>
+    <tr><td>5</td><td></td><td></td></tr>
+  </tbody>
+</table>
+
+:::
+
+
+5. Repita os passos 3 e 4 mais quatro vezes, completando a Tabela 1. Calcule o valor médio dos períodos obtidos.
+
+6. Utilizando o valor médio de $T$, a massa $m$ e a equação \eqref{eq_02}, determine o valor da constante elástica $k$ da mola utilizada.
+
+7. Caso você tenha determinado a constante da mola usada nesta atividade através de outro experimento (por exemplo, a Lei de Hooke), compare os dois valores e calcule o desvio percentual entre eles:
+
+$$
+\Delta k (\%) = \dfrac{|k_{\text{MHS}} - k_{\text{Hooke}}|}{k_{\text{Hooke}}} \times 100
+$$
+
+
+
 
 # Referências
+
+
 
 
 

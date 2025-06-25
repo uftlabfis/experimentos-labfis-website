@@ -1,0 +1,40 @@
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
+
+\usepackage{color, colortbl}
+\usepackage{enumitem,multicol,multirow}
+\usepackage{adjustbox}
+\setlength{\parindent}{1.25cm}
+
+\usepackage{graphicx}
+\usepackage[position=top]{caption}
+\usepackage[labelsep=endash]{caption}
+\usepackage{float}
+
+\usepackage{xcolor}
+\definecolor{uftverde}{rgb}{0.0, 0.537, 0.486}
+
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+% Cabeçalho e rodapé
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% Desativa a linha horizontal no cabeçalho
+\renewcommand{\headrulewidth}{0pt}
+
+% Ativa a linha horizontal no rodapé (ajuste a espessura)
+\renewcommand{\footrulewidth}{1pt}  % ativa linha no rodapé
+
+% Configure os conteúdos do cabeçalho e rodapé conforme desejar
+\fancyhead{} % limpa cabeçalho
+\fancyfoot{} % limpa rodapé
+\fancyfoot[L]{Labfis - UFT - Câmpus Palmas}
+\fancyfoot[R]{\thepage} % exemplo: número da página central no rodapé
+
+\renewcommand{\footrule}{%
+  {\color{uftverde}\hrule height 1pt width \headwidth}%
+  \color{black} % ou cor padrão da fonte
+  \vskip2pt
+}
+
+\renewcommand{\maketitle}{}
