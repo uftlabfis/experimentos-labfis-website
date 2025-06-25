@@ -1,0 +1,100 @@
+/* Cores principais */
+:root {
+  --cor-primaria: #00897c;
+  --cor-secundaria: #00517f;
+  --cor-neutra: #7f8183;
+  --cor-escura: #060606;
+}
+
+html {
+  font-size: 18px; /* aumenta o tamanho base de 16px para 18px */
+}
+
+
+
+header {
+  color: var(--cor-secundaria);
+}
+
+.navbar {
+  background-color: var(--cor-primaria);
+}
+
+.navbar-title, .menu-text {
+  color: white;        /* texto dos links branco */
+  text-decoration: none; /* opcional, tira sublinhado */
+}
+
+.navbar-title:hover, .menu-text:hover {
+  color: #cccccc; /* muda a cor quando o mouse passa */
+}
+
+/* Estilização do rodapé do site Quarto */
+
+.footer, .nav-footer {
+  background-color: var(--cor-escura);  /* cinza escuro */
+  color: #ffffff;             /* texto branco */
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Links no rodapé */
+.page-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Links ao passar o mouse */
+.page-footer a:hover {
+  color: #cccccc;
+}
+
+/* Se quiser alinhar o texto do lado esquerdo e direito */
+.page-footer .footer-left,
+.page-footer .footer-right {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Footer CSS */
+.nav-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.nav-footer a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
+
+.nav-footer-left, .nav-footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.labfis-logo {
+  width: 75px;
+  height: auto;
+}
+
+.linha {
+  border: none;               /* remove o estilo padrão */
+  height: 1px;                /* espessura da linha */
+  background-color: var(--cor-primaria);  /* cor personalizada */
+  width: 80vw;                /* largura da linha */
+  margin: 10px 0;             /* espaçamento acima e abaixo */
+}
+
+.nav-link {
+  color: red;
+}
+
+
+
+
+
+

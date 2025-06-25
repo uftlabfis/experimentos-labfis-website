@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Laboratório de Ensino de Física",
+    "section": "",
+    "text": "O Laboratório de Ensino de Física da Universidade Federal do Tocantins (LABFIS) constitui um ambiente acadêmico voltado à promoção da formação científica e didático-pedagógica dos discentes dos cursos de Engenharia Ambiental, Engenharia Civil, Engenharia de Alimentos, Engenharia Elétrica e Licenciatura em Física (EaD).\nSua estrutura é destinada ao desenvolvimento de atividades práticas, experimentais e investigativas que visam à articulação entre teoria e prática no processo de ensino-aprendizagem da Física."
+  },
+  {
+    "objectID": "index.html#roteiros-e-experimentos",
+    "href": "index.html#roteiros-e-experimentos",
+    "title": "Laboratório de Ensino de Física",
+    "section": "Roteiros e Experimentos",
+    "text": "Roteiros e Experimentos\n\n\n\n\n\n\n\n\n\n\nÁrea\nTema\nURL\n\n\n\n\nInstrumentação\nPaquímetro\nVer roteiro\n\n\nFísica 2\nQueda Livre\nVer roteiro\n\n\nFísica 2\nOscilações Harmômicas Simples\nVer roteiro\n\n\nFísica 3\nCircuito RC\nVer roteiro\n\n\nFísica 4\nEspectro de Emissão\nVer roteiro"
+  },
+  {
+    "objectID": "src/instrumentacao/paquimetro.html",
+    "href": "src/instrumentacao/paquimetro.html",
+    "title": "Roteiro Experimental: Paquímetro",
+    "section": "",
+    "text": "Introdução\nO paquímetro é um instrumento utilizado para medir com precisão dimensões internas, externas e profundidades de objetos…\n\n\nObjetivos\n\nCompreender o funcionamento do paquímetro;\nAprender a realizar medições precisas;\nAnalisar as fontes de erro na medição.\n\n\n\nMateriais\n\nPaquímetro;\nObjetos para medição (ex: blocos, tubos);\n\n\n\nProcedimentos\n\nVerificar a calibração do paquímetro.\nMedir a dimensão externa dos objetos.\nMedir a dimensão interna dos objetos.\nMedir a profundidade dos objetos.\nAnotar os resultados e calcular as incertezas.\n\n\n\nReferências"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "src/fisica-2/massa-mola-mhs.html",
+    "href": "src/fisica-2/massa-mola-mhs.html",
+    "title": "Oscilações Harmônicas Simples: Sistema Massa-Mola",
+    "section": "",
+    "text": "Introdução\nConsidere uma massa \\(m\\) conectada a uma mola ideal cuja constante elástica é igual a \\(k\\), conforme mostra a Figura \\(\\ref{fig_1}\\). Este sistema é geralmente denominado . Inicialmente, a mola está em repouso e em posição de equilíbrio. O sistema está imersa em um meio, por exemplo o ar, cuja resistência ao movimento pode ser desprezada.\n\n\nObjetivos\n\nCompreender o funcionamento do paquímetro;\nAprender a realizar medições precisas;\nAnalisar as fontes de erro na medição.\n\n\n\nMateriais\n\nPaquímetro;\nObjetos para medição (ex: blocos, tubos);\n\n\n\nProcedimentos\n\nVerificar a calibração do paquímetro.\nMedir a dimensão externa dos objetos.\nMedir a dimensão interna dos objetos.\nMedir a profundidade dos objetos.\nAnotar os resultados e calcular as incertezas.\n\n\n\nReferências"
+  }
+]
