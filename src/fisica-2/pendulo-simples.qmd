@@ -1,0 +1,247 @@
+---
+title: "Pêndulo Simples"
+lang: pt-BR
+format:
+  html:
+    math: mathjax
+    theme:
+      - cosmo
+      - brand
+    toc: true
+  pdf:
+    documentclass: article
+    toc: false
+    number-sections: true
+    pdf-engine: pdflatex
+    geometry: margin=2cm
+    fontsize: 12pt
+    fig-pos: 'H'
+    include-in-header: ../preamble.tex
+    title-block: false
+bibliography: ../referencias.bib
+csl: ../abnt.csl
+---
+
+```{=latex}
+\thispagestyle{empty}
+
+\noindent
+\textcolor{uftverde}{\rule{\textwidth}{1.5pt}}
+
+\vspace{0.2cm}
+
+\begin{minipage}[c]{0.6\textwidth}
+  \textbf{UNIVERSIDADE FEDERAL DO TOCANTINS}\\
+  CÂMPUS UNIVERSITÁRIO DE PALMAS\\
+  LABORATÓRIO DE ENSINO DE FÍSICA
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.4\textwidth}
+  \flushright
+  \includegraphics[width=0.25\textwidth]{../../assets/img/identidade-visual/uftlabfis.png}
+\end{minipage}
+
+\vspace{0.2cm}
+
+\noindent
+\textcolor{uftverde}{\rule{\textwidth}{1.5pt}}
+
+\vspace{0.5cm}
+
+\begin{center}
+  {\Large{Pêndulo Simples}}
+\end{center}
+
+\setlength{\parindent}{1.25cm}
+``` 
+
+
+
+# Introdução
+
+
+O pêndulo simples é um sistema físico composto por uma massa puntiforme $m$ suspensa por um fio inextensível, de massa desprezível e comprimento $l$. A força restauradora responsável pelas oscilações é devida à componente do peso que atua perpendicularmente à trajetória, enquanto a tensão $T$ apenas guia o movimento da massa ao longo de um arco circular [@halliday2].
+
+
+![Forças no Pêndulo Simples](../../assets/img/roteiros/fisica-2/pendulo-simples/pendulo-simples.png){#fig-pendulo width=40%}
+
+A força restauradora sobre o pêndulo é dada por:
+
+$$
+    \vec{F}_R = \vec{P}_{\perp}
+$$
+
+Ou, mais especificamente:
+
+$$
+    \vec{F}_R = -mg \,\text{sen}\, \theta
+$$
+
+Observe que essa força **não** é linear em relação ao deslocamento angular $\theta$, mas sim proporcional a $\text{sen}\, \theta$. Isso significa que, rigorosamente, o movimento do pêndulo **não** é harmônico simples. No entanto, para pequenos valores de $\theta$ (em radianos), pode-se utilizar a aproximação:
+
+$$
+\,\text{sen}\, \theta \approx \theta
+$$
+
+Com isso, a força restauradora torna-se aproximadamente linear:
+
+$$
+    \vec{F}_R \approx -mg \theta
+$$
+
+Aplicando a Segunda Lei de Newton para movimento rotacional:
+
+$$
+    F_r = ma = -mg \theta
+$$
+
+Sabendo que a aceleração tangencial $a$ está relacionada à aceleração angular $\alpha$ por:
+
+$$
+a = l \alpha
+$$
+
+Substituindo na equação anterior, obtemos:
+
+$$
+    ml\alpha = -mg\theta
+$$
+
+Utilizando a definição de aceleração angular em termos de deslocamento angular:
+
+$$
+\alpha = \dfrac{d\omega}{dt} = \dfrac{d^2 \theta}{dt^2}
+$$
+
+Chegamos à equação diferencial do movimento:
+
+\begin{equation}\tag{1}\label{eq:diferencial}
+    \dfrac{d^2 \theta}{dt^2} + \dfrac{g}{l} \theta = 0
+\end{equation}
+
+A Equação \ref{eq:diferencial} é formalmente idêntica à equação do oscilador harmônico simples. Portanto, por analogia, a frequência angular $\omega$ pode ser definida como:
+
+\begin{equation}\tag{2}\label{eq:frequencia}
+    \omega^2 = \dfrac{g}{l}
+\end{equation}
+
+Consequentemente, o período de oscilação do pêndulo simples para pequenas amplitudes é dado por:
+
+\begin{align}
+    T &= \dfrac{2\pi}{\omega} \nonumber\\
+    T &= 2\pi \sqrt{\dfrac{l}{g}}\tag{3}\label{eq:periodo}
+\end{align}
+
+A Equação \ref{eq:periodo} representa o período teórico do pêndulo simples no regime de pequenas oscilações.
+
+
+
+
+# Objetivos
+
+* verificar a equação teórica que descreve o comportamento do período de um pêndulo simples.
+
+
+# Material Necessário
+
+* Suporte Metálico;
+* Fio inextensível;
+* Massa acoplável;
+* Cronômetro digital;
+* Régua ou Trena.
+
+
+```{=latex}
+
+\section{Andamento das atividades}
+
+\begin{enumerate}
+	\item Com o comprimento do fio de  40 cm, desloque o pêndulo (aproximadamente 5 cm) do seu ponto de equilíbrio e deixe-o oscilar.
+	\item Cronometre o tempo de 10 oscilações completas e anote o valor na Tabela \ref{tab:dados}.
+	\item Repita os procedimentos anteriores para todos os valores de $l$ escritos na Tabela \ref{tab:dados}.
+	\item Repita os passos acima parao  comprimento $l = 80$ cm. Deverá ser calculado o valor do período teórico (Equação \ref{eq:periodo}) e o erro percentual com base na Equação \ref{eq:erro}.
+\end{enumerate}
+
+\begin{table}
+  \begin{tabular}{c}
+  \end{tabular}
+  \label{tab:teste}
+\end{table}
+
+\begin{equation}\tag{4}\label{eq:erro}
+    E (\%) = \dfrac{|T_{\mbox{experimental}}  - T_{\mbox{teórico}}|}{T_{\mbox{teórico}}} \times 100
+\end{equation}
+
+
+\begin{table}[H]
+    \centering
+    \caption{Período de oscilação do pêndulo em relação ao comprimento $l$ do fio}
+    \label{tab:dados}
+    \begin{tabular}{c | p{4cm} | p{4cm} | p{3.5cm} | c}
+        \hline
+        \rowcolor{gray!30!} $l$ (m) & Tempo de 10 oscilações ($t$) s & Período experimental $T = t / 10$ s & Período teórico (Equação \ref{eq:periodo}) & Erro $E$ (\%) \\ \hline
+        0,4 m & & & & \\ \hline
+        \rowcolor{gray!30!} 0,8 m & & & & \\ \hline
+    \end{tabular}
+\end{table}
+
+
+
+
+
+
+\section*{Referências}
+
+```
+
+
+```{=html}
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Modifica o título
+  const h2 = document.querySelector(".quarto-alternate-formats h2");
+  if (h2) h2.textContent = "Roteiros disponíveis";
+
+  // Lista de objetos com os itens
+  const itens = [
+    {
+      href: "pendulo-simples.pdf",
+      label: "Versão do Labfis"
+    },
+  ];
+
+  // Seleciona a ul e atualiza os itens
+  const ul = document.querySelector(".quarto-alternate-formats ul");
+  if (ul) {
+    ul.innerHTML = ""; // limpa a lista
+
+    itens.forEach(item => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = item.href;
+      a.setAttribute("data-original-href", item.href);
+      a.setAttribute("target", "_blank");
+      a.innerHTML = `<i class="bi bi-file-pdf"></i> ${item.label}`;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+  }
+});
+</script>
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lei de Hooke – UFTLABFIS</title>
+<title>Pêndulo Simples – UFTLABFIS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -161,14 +161,14 @@ window.Quarto = {
   <li><a href="#objetivos" id="toc-objetivos" class="nav-link" data-scroll-target="#objetivos">Objetivos</a></li>
   <li><a href="#material-necessário" id="toc-material-necessário" class="nav-link" data-scroll-target="#material-necessário">Material Necessário</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Outros formatos</h2><ul><li><a href="lei-de-hooke.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Outros formatos</h2><ul><li><a href="pendulo-simples.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lei de Hooke</h1>
+<h1 class="title">Pêndulo Simples</h1>
 </div>
 
 
@@ -187,70 +187,79 @@ window.Quarto = {
 
 <section id="introdução" class="level1">
 <h1>Introdução</h1>
-<p>Considere uma mola, presa em uma de suas extremidades (<a href="#fig-forcas" class="quarto-xref">Figura&nbsp;1</a>(a)), e em <strong>posição de equilíbrio</strong>, ou seja, a mola não está nem <em>comprimida</em> nem <em>alongada</em>. Em certo instante, puxamos a mola provocando um pequeno aumento em seu comprimento (<a href="#fig-forcas" class="quarto-xref">Figura&nbsp;1</a>(b)). Observamos que a mola tende a retornar à posição de equilíbrio, ou seja, ao seu estado natural através da aplicação de uma força restauradora <span class="math inline">\(F\)</span> que aponta no sentido oposto do deslocamento sofrido. Se comprimirmos a mola, diminuindo seu comprimento, observaremos que também neste caso surge uma força que tende a restaurar o estado natural da mola (<a href="#fig-forcas" class="quarto-xref">Figura&nbsp;1</a>(c)). Dito de outro modo, a força restauradora <span class="math inline">\(F\)</span> (também denominada força elástica) é sempre contrária ao sentido da deformação <span class="math inline">\(x\)</span> sofrida pela mola <span class="citation" data-cites="halliday2">(<a href="#ref-halliday2" role="doc-biblioref">Halliday; Resnick; Walker, 2008</a>)</span>.</p>
-<div id="fig-forcas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>O pêndulo simples é um sistema físico composto por uma massa puntiforme <span class="math inline">\(m\)</span> suspensa por um fio inextensível, de massa desprezível e comprimento <span class="math inline">\(l\)</span>. A força restauradora responsável pelas oscilações é devida à componente do peso que atua perpendicularmente à trajetória, enquanto a tensão <span class="math inline">\(T\)</span> apenas guia o movimento da massa ao longo de um arco circular <span class="citation" data-cites="halliday2">(<a href="#ref-halliday2" role="doc-biblioref">Halliday; Resnick; Walker, 2008</a>)</span>.</p>
+<div id="fig-pendulo" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-forcas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../../assets/img/roteiros/fisica-2/massa-mola-mhs/forcas.png" class="img-fluid figure-img" style="width:40.0%">
+<div aria-describedby="fig-pendulo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../assets/img/roteiros/fisica-2/pendulo-simples/pendulo-simples.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-forcas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Força aplicada em uma mola
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pendulo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Forças no Pêndulo Simples
 </figcaption>
 </figure>
 </div>
-<p>Como boa aproximação, verificamos experimentalmente que vale a relação denominada <strong>Lei de Hooke</strong>:</p>
-<p><span class="math display">\[\begin{equation}\label{eq_01}
-F =  k x
-\end{equation}\]</span> ou seja, a força restauradora é proporcional à deformação sofrida pela mola, medida a partir de sua posição de equilíbrio. A constante de proporcionalidade , denominada constante elástica é característica de cada mola. Em unidades do Sistema Internacional (SI), a constante elástica é medida em N/m <span class="citation" data-cites="halliday2">(<a href="#ref-halliday2" role="doc-biblioref">Halliday; Resnick; Walker, 2008</a>)</span>.</p>
-<p>Graficamente, devemos ter:</p>
-<div id="fig-grafico" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-grafico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../../assets/img/roteiros/fisica-2/massa-mola-mhs/grafico.png" class="img-fluid figure-img" style="width:40.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2: Gráfico da Lei de Hooke
-</figcaption>
-</figure>
-</div>
-<p>Do fato de a lei de Hooke ser uma relação linear, concluímos que a constante elástica é numericamente igual à tangente do ângulo de inclinação do gráfico da força elástica em função da deformação da mola. Isso nos sugere uma metodologia de experimento para a determinação desta constante.</p>
+<p>A força restauradora sobre o pêndulo é dada por:</p>
+<p><span class="math display">\[
+    \vec{F}_R = \vec{P}_{\perp}
+\]</span></p>
+<p>Ou, mais especificamente:</p>
+<p><span class="math display">\[
+    \vec{F}_R = -mg \,\text{sen}\, \theta
+\]</span></p>
+<p>Observe que essa força <strong>não</strong> é linear em relação ao deslocamento angular <span class="math inline">\(\theta\)</span>, mas sim proporcional a <span class="math inline">\(\text{sen}\, \theta\)</span>. Isso significa que, rigorosamente, o movimento do pêndulo <strong>não</strong> é harmônico simples. No entanto, para pequenos valores de <span class="math inline">\(\theta\)</span> (em radianos), pode-se utilizar a aproximação:</p>
+<p><span class="math display">\[
+\,\text{sen}\, \theta \approx \theta
+\]</span></p>
+<p>Com isso, a força restauradora torna-se aproximadamente linear:</p>
+<p><span class="math display">\[
+    \vec{F}_R \approx -mg \theta
+\]</span></p>
+<p>Aplicando a Segunda Lei de Newton para movimento rotacional:</p>
+<p><span class="math display">\[
+    F_r = ma = -mg \theta
+\]</span></p>
+<p>Sabendo que a aceleração tangencial <span class="math inline">\(a\)</span> está relacionada à aceleração angular <span class="math inline">\(\alpha\)</span> por:</p>
+<p><span class="math display">\[
+a = l \alpha
+\]</span></p>
+<p>Substituindo na equação anterior, obtemos:</p>
+<p><span class="math display">\[
+    ml\alpha = -mg\theta
+\]</span></p>
+<p>Utilizando a definição de aceleração angular em termos de deslocamento angular:</p>
+<p><span class="math display">\[
+\alpha = \dfrac{d\omega}{dt} = \dfrac{d^2 \theta}{dt^2}
+\]</span></p>
+<p>Chegamos à equação diferencial do movimento:</p>
+<p><span class="math display">\[\begin{equation}\tag{1}\label{eq:diferencial}
+    \dfrac{d^2 \theta}{dt^2} + \dfrac{g}{l} \theta = 0
+\end{equation}\]</span></p>
+<p>A Equação <span class="math inline">\(\ref{eq:diferencial}\)</span> é formalmente idêntica à equação do oscilador harmônico simples. Portanto, por analogia, a frequência angular <span class="math inline">\(\omega\)</span> pode ser definida como:</p>
+<p><span class="math display">\[\begin{equation}\tag{2}\label{eq:frequencia}
+    \omega^2 = \dfrac{g}{l}
+\end{equation}\]</span></p>
+<p>Consequentemente, o período de oscilação do pêndulo simples para pequenas amplitudes é dado por:</p>
+<p><span class="math display">\[\begin{align}
+    T &amp;= \dfrac{2\pi}{\omega} \nonumber\\
+    T &amp;= 2\pi \sqrt{\dfrac{l}{g}}\tag{3}\label{eq:periodo}
+\end{align}\]</span></p>
+<p>A Equação <span class="math inline">\(\ref{eq:periodo}\)</span> representa o período teórico do pêndulo simples no regime de pequenas oscilações.</p>
 </section>
 <section id="objetivos" class="level1">
 <h1>Objetivos</h1>
 <ul>
-<li>discutir um sistema massa mola;</li>
-<li>caracterizar o modelo físico denominado mola ideal;</li>
-<li>aplicar a lei de Hooke;</li>
-<li>construir o gráfico da força elástica <span class="math inline">\(F\)</span> em função da elongação da mola <span class="math inline">\(x\)</span>;</li>
-<li>obter o valor da constante elástica <span class="math inline">\(k\)</span> da mola a partir do gráfico de <span class="math inline">\(F\)</span> versus <span class="math inline">\(x\)</span>.</li>
+<li>verificar a equação teórica que descreve o comportamento do período de um pêndulo simples.</li>
 </ul>
 </section>
 <section id="material-necessário" class="level1">
 <h1>Material Necessário</h1>
-<div style="display: flex; align-items: flex-start; gap: 1rem;">
-
-  <div style="flex: 0 0 40%; text-align: center;">
-    <figure class="figure">
-      <img src="../../assets/img/roteiros/fisica-2/massa-mola-mhs/equipamento.png" alt="Aparato experimental" style="width: 75%; height: auto;" class="figure-img">
-      <figcaption style="margin-top: 0.5em;">
-        Aparato experimental
-      </figcaption>
-    </figure>
-  </div>
-
-  <div style="flex: 0 0 50%;">
-    <ul>
-      <li>sistema de sustentação principal de aço e garras de sustentação;</li>
-      <li>sistema de sustentação principal de aço e garras de sustentação;</li>
-      <li>mola e suporte para massas acopláveis;</li>
-      <li>10 anilhas acopláveis;</li>
-      <li>Régua milimetrada ou trena;</li>
-      <li>balança digital.</li>
-    </ul>
-  </div>
-
-</div>
-
+<ul>
+<li>Suporte Metálico;</li>
+<li>Fio inextensível;</li>
+<li>Massa acoplável;</li>
+<li>Cronômetro digital;</li>
+<li>Régua ou Trena.</li>
+</ul>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -261,13 +270,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Lista de objetos com os itens
   const itens = [
     {
-      href: "lei-de-hooke.pdf",
+      href: "pendulo-simples.pdf",
       label: "Versão do Labfis"
     },
-    {
-      href: "/experimentos-labfis-website/assets/outros-roteiros/fisica-2/lei-de-hooke-e-mhs-heverton.pdf",
-      label: "Versão do prof. Heverton"
-    }
   ];
 
   // Seleciona a ul e atualiza os itens

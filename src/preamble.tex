@@ -26,6 +26,22 @@
 \definecolor{uftverde}{rgb}{0.0, 0.537, 0.486}
 \captionsetup[table]{skip=2pt}   % Para tabelas
 \captionsetup[figure]{skip=5pt}  % Para figuras
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\bfseries\fontsize{12pt}{14pt}\selectfont}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\bfseries\fontsize{12pt}{14pt}\selectfont}
+  {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\normalfont\bfseries\fontsize{12pt}{14pt}\selectfont}
+  {\thesubsubsection}{1em}{}
+
+
+\DeclareMathOperator{\senop}{sen}
+\newcommand{\sen}{\senop\,}
 
 % --- ESTILOS DE LISTAS ---
 \setlist[enumerate]{

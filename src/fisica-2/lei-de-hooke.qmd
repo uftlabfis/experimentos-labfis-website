@@ -49,7 +49,7 @@ csl: ../abnt.csl
 \vspace{0.5cm}
 
 \begin{center}
-  {\LARGE{Lei de Hooke}}
+  {\Large{Lei de Hooke}}
 \end{center}
 
 \setlength{\parindent}{1.25cm}
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
       label: "Versão do Labfis"
     },
     {
-      href: "/experimentos-labfis-website/assets/outros-roteiros/fisica-2/Lei_de_Hooke_e_MHS_compressed.pdf",
+      href: "/experimentos-labfis-website/assets/outros-roteiros/fisica-2/lei-de-hooke-e-mhs-heverton.pdf",
       label: "Versão do prof. Heverton"
     }
   ];
