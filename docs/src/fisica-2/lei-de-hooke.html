@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Laboratório de Ensino de Física – UFTLABFIS</title>
+<title>Lei de Hooke – UFTLABFIS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,24 +20,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 1em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -66,18 +87,47 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="assets/css/styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title"><strong>UFTLABFIS</strong></span>
     </a>
   </div>
@@ -88,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Página Inicial</span></a>
   </li>  
 </ul>
@@ -102,78 +152,156 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#objetivos" id="toc-objetivos" class="nav-link" data-scroll-target="#objetivos">Objetivos</a></li>
+  <li><a href="#material-necessário" id="toc-material-necessário" class="nav-link" data-scroll-target="#material-necessário">Material Necessário</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Outros formatos</h2><ul><li><a href="lei-de-hooke.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="assets/img/identidade-visual/uftlabfis3.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Laboratório de Ensino de Física</h1>
+<h1 class="title">Lei de Hooke</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><main class="content" id="quarto-document-content">
-<p>O <strong>Laboratório de Ensino de Física</strong> da Universidade Federal do Tocantins (LABFIS) constitui um ambiente acadêmico voltado à promoção da formação científica e didático-pedagógica dos discentes dos cursos de Engenharia Ambiental, Engenharia Civil, Engenharia de Alimentos, Engenharia Elétrica e Licenciatura em Física (EaD).</p>
-<p>Sua estrutura é destinada ao desenvolvimento de atividades práticas, experimentais e investigativas que visam à articulação entre teoria e prática no processo de ensino-aprendizagem da Física.</p>
-<section id="roteiros-e-experimentos" class="level2">
-<h2 data-anchor-id="roteiros-e-experimentos">Roteiros e Experimentos</h2>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 24%">
-<col style="width: 63%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Área</th>
-<th style="text-align: left;">Tema</th>
-<th style="text-align: center;">URL</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Instrumentação</td>
-<td style="text-align: left;">Paquímetro</td>
-<td style="text-align: center;"><a href="src/instrumentacao/paquimetro.html" target="_blank">Ver roteiro</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Física 2</td>
-<td style="text-align: left;">Queda Livre</td>
-<td style="text-align: center;"><a href="roteiros/queda-livre.html">Ver roteiro</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Física 2</td>
-<td style="text-align: left;">Lei de Hook</td>
-<td style="text-align: center;"><a href="src/fisica-2/lei-de-hooke.html" target="_blank">Ver roteiro</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Física 2</td>
-<td style="text-align: left;">Oscilações Harmômicas Simples</td>
-<td style="text-align: center;"><a href="src/fisica-2/massa-mola-mhs.html" target="_blank">Ver roteiro</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Física 3</td>
-<td style="text-align: left;">Circuito RC</td>
-<td style="text-align: center;"><a href="roteiros/circuito-rc.html">Ver roteiro</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Física 4</td>
-<td style="text-align: left;">Espectro de Emissão</td>
-<td style="text-align: center;"><a href="roteiros/espectro.html">Ver roteiro</a></td>
-</tr>
-</tbody>
-</table>
+  
+
+
+</header>
+
+
+<section id="introdução" class="level1">
+<h1>Introdução</h1>
+<p>Considere uma mola, presa em uma de suas extremidades (<a href="#fig-forcas" class="quarto-xref">Figura&nbsp;1</a>(a)), e em <strong>posição de equilíbrio</strong>, ou seja, a mola não está nem <em>comprimida</em> nem <em>alongada</em>. Em certo instante, puxamos a mola provocando um pequeno aumento em seu comprimento (<a href="#fig-forcas" class="quarto-xref">Figura&nbsp;1</a>(b)). Observamos que a mola tende a retornar à posição de equilíbrio, ou seja, ao seu estado natural através da aplicação de uma força restauradora <span class="math inline">\(F\)</span> que aponta no sentido oposto do deslocamento sofrido. Se comprimirmos a mola, diminuindo seu comprimento, observaremos que também neste caso surge uma força que tende a restaurar o estado natural da mola (<a href="#fig-forcas" class="quarto-xref">Figura&nbsp;1</a>(c)). Dito de outro modo, a força restauradora <span class="math inline">\(F\)</span> (também denominada força elástica) é sempre contrária ao sentido da deformação <span class="math inline">\(x\)</span> sofrida pela mola <span class="citation" data-cites="halliday2">(<a href="#ref-halliday2" role="doc-biblioref">Halliday; Resnick; Walker, 2008</a>)</span>.</p>
+<div id="fig-forcas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-forcas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../assets/img/roteiros/fisica-2/massa-mola-mhs/forcas.png" class="img-fluid figure-img" style="width:40.0%">
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-forcas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Força aplicada em uma mola
+</figcaption>
+</figure>
 </div>
+<p>Como boa aproximação, verificamos experimentalmente que vale a relação denominada <strong>Lei de Hooke</strong>:</p>
+<p><span class="math display">\[\begin{equation}\label{eq_01}
+F =  k x
+\end{equation}\]</span> ou seja, a força restauradora é proporcional à deformação sofrida pela mola, medida a partir de sua posição de equilíbrio. A constante de proporcionalidade , denominada constante elástica é característica de cada mola. Em unidades do Sistema Internacional (SI), a constante elástica é medida em N/m <span class="citation" data-cites="halliday2">(<a href="#ref-halliday2" role="doc-biblioref">Halliday; Resnick; Walker, 2008</a>)</span>.</p>
+<p>Graficamente, devemos ter:</p>
+<div id="fig-grafico" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../assets/img/roteiros/fisica-2/massa-mola-mhs/grafico.png" class="img-fluid figure-img" style="width:40.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Gráfico da Lei de Hooke
+</figcaption>
+</figure>
+</div>
+<p>Do fato de a lei de Hooke ser uma relação linear, concluímos que a constante elástica é numericamente igual à tangente do ângulo de inclinação do gráfico da força elástica em função da deformação da mola. Isso nos sugere uma metodologia de experimento para a determinação desta constante.</p>
+</section>
+<section id="objetivos" class="level1">
+<h1>Objetivos</h1>
+<ul>
+<li>discutir um sistema massa mola;</li>
+<li>caracterizar o modelo físico denominado mola ideal;</li>
+<li>aplicar a lei de Hooke;</li>
+<li>construir o gráfico da força elástica <span class="math inline">\(F\)</span> em função da elongação da mola <span class="math inline">\(x\)</span>;</li>
+<li>obter o valor da constante elástica <span class="math inline">\(k\)</span> da mola a partir do gráfico de <span class="math inline">\(F\)</span> versus <span class="math inline">\(x\)</span>.</li>
+</ul>
+</section>
+<section id="material-necessário" class="level1">
+<h1>Material Necessário</h1>
+<div style="display: flex; align-items: flex-start; gap: 1rem;">
+
+  <div style="flex: 0 0 40%; text-align: center;">
+    <figure class="figure">
+      <img src="../../assets/img/roteiros/fisica-2/massa-mola-mhs/equipamento.png" alt="Aparato experimental" style="width: 75%; height: auto;" class="figure-img">
+      <figcaption style="margin-top: 0.5em;">
+        Aparato experimental
+      </figcaption>
+    </figure>
+  </div>
+
+  <div style="flex: 0 0 50%;">
+    <ul>
+      <li>sistema de sustentação principal de aço e garras de sustentação;</li>
+      <li>sistema de sustentação principal de aço e garras de sustentação;</li>
+      <li>mola e suporte para massas acopláveis;</li>
+      <li>10 anilhas acopláveis;</li>
+      <li>Régua milimetrada ou trena;</li>
+      <li>balança digital.</li>
+    </ul>
+  </div>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Modifica o título
+  const h2 = document.querySelector(".quarto-alternate-formats h2");
+  if (h2) h2.textContent = "Roteiros disponíveis";
+
+  // Lista de objetos com os itens
+  const itens = [
+    {
+      href: "lei-de-hooke.pdf",
+      label: "Versão do Labfis"
+    },
+    {
+      href: "/experimentos-labfis-website/assets/outros-roteiros/fisica-2/Lei_de_Hooke_e_MHS_compressed.pdf",
+      label: "Versão do prof. Heverton"
+    }
+  ];
+
+  // Seleciona a ul e atualiza os itens
+  const ul = document.querySelector(".quarto-alternate-formats ul");
+  if (ul) {
+    ul.innerHTML = ""; // limpa a lista
+
+    itens.forEach(item => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = item.href;
+      a.setAttribute("data-original-href", item.href);
+      a.setAttribute("target", "_blank");
+      a.innerHTML = `<i class="bi bi-file-pdf"></i> ${item.label}`;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+  }
+});
+</script>
+
+
+
+
+
 
 
 </section>
-</main>  
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="1" role="list">
+<div id="ref-halliday2" class="csl-entry" role="listitem">
+HALLIDAY, David; RESNICK, Robert; WALKER, Jearl. <strong>Fundamentos da Física: Gravitação, Ondas e Termodinâmica</strong>. 8. ed. Rio de Janeiro: LTC, 2008. v. 2
 </div>
- <!-- /main -->
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -194,6 +322,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -589,7 +724,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-footer">
     <div class="nav-footer-left">
 <div>
-<img src="./assets/img/identidade-visual/uftlabfis3.png" alt="Logo LABFIS" class="labfis-logo">
+<img src="../../assets/img/identidade-visual/uftlabfis3.png" alt="Logo LABFIS" class="labfis-logo">
 </div>
 <div>
 <strong>Endereço:</strong> <a href="https://maps.app.goo.gl/DBYj96UkxcoRs2CPA" target="_blank">Câmpus de Palmas, Avenida NS-15, ALCNO-14, Bloco II, Salas 10 e 10A</a>

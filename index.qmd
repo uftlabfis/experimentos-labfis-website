@@ -36,6 +36,11 @@ roteiros_df <- rbind(
   ),
   data.frame(
     Área = "Física 2",
+    Tema = "Lei de Hook",
+    URL = '<a href="src/fisica-2/lei-de-hooke.html" target="_blank">Ver roteiro</a>'
+  ),
+  data.frame(
+    Área = "Física 2",
     Tema = "Oscilações Harmômicas Simples",
     URL = '<a href="src/fisica-2/massa-mola-mhs.html" target="_blank">Ver roteiro</a>'
   ),

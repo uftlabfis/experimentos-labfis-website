@@ -1,0 +1,255 @@
+---
+title: "Lei de Hooke"
+lang: pt-BR
+format:
+  html:
+    math: mathjax
+    theme:
+      - cosmo
+      - brand
+    toc: true
+  pdf:
+    documentclass: article
+    toc: false
+    number-sections: true
+    pdf-engine: pdflatex
+    geometry: margin=2cm
+    fontsize: 12pt
+    fig-pos: 'H'
+    include-in-header: ../preamble.tex
+    title-block: false
+bibliography: ../referencias.bib
+csl: ../abnt.csl
+---
+
+```{=latex}
+\thispagestyle{empty}
+
+\noindent
+\textcolor{uftverde}{\rule{\textwidth}{1.5pt}}
+
+\vspace{0.2cm}
+
+\begin{minipage}[c]{0.6\textwidth}
+  \textbf{UNIVERSIDADE FEDERAL DO TOCANTINS}\\
+  CÂMPUS UNIVERSITÁRIO DE PALMAS\\
+  LABORATÓRIO DE ENSINO DE FÍSICA
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.4\textwidth}
+  \flushright
+  \includegraphics[width=0.25\textwidth]{../../assets/img/identidade-visual/uftlabfis.png}
+\end{minipage}
+
+\vspace{0.2cm}
+
+\noindent
+\textcolor{uftverde}{\rule{\textwidth}{1.5pt}}
+
+\vspace{0.5cm}
+
+\begin{center}
+  {\LARGE{Lei de Hooke}}
+\end{center}
+
+\setlength{\parindent}{1.25cm}
+%\renewcommand{\arraystretch}{1.5}
+``` 
+
+
+
+# Introdução
+
+Considere uma mola, presa em uma de suas extremidades (@fig-forcas(a)), e em **posição de equilíbrio**, ou seja, a mola não está nem *comprimida* nem *alongada*. Em certo instante, puxamos a mola provocando um pequeno aumento em seu comprimento (@fig-forcas(b)). Observamos que a mola tende a retornar à posição de equilíbrio, ou seja, ao seu estado natural através da aplicação de uma força restauradora $F$ que aponta no sentido oposto do deslocamento sofrido. Se comprimirmos a mola, diminuindo seu comprimento, observaremos que também neste caso surge uma força que tende a restaurar o estado natural da mola (@fig-forcas(c)). Dito de outro modo, a força restauradora $F$ (também denominada força elástica) é sempre contrária ao sentido da deformação $x$ sofrida pela mola [@halliday2].
+
+
+![Força aplicada em uma mola](../../assets/img/roteiros/fisica-2/massa-mola-mhs/forcas.png){#fig-forcas width=40%}
+
+Como boa aproximação, verificamos experimentalmente que vale a relação denominada **Lei de Hooke**:
+
+\begin{equation}\label{eq_01}
+F =  k x
+\end{equation}
+ou seja, a força restauradora é proporcional à deformação sofrida pela mola, medida a partir de sua posição de equilíbrio. A constante de proporcionalidade , denominada constante elástica é característica de cada mola. Em unidades do Sistema Internacional (SI), a constante elástica é medida em N/m [@halliday2].
+
+Graficamente, devemos ter:
+
+![Gráfico da Lei de Hooke](../../assets/img/roteiros/fisica-2/massa-mola-mhs/grafico.png){#fig-grafico width=40%}
+
+Do fato de a lei de Hooke ser uma relação linear, concluímos que a constante elástica é numericamente igual à tangente do ângulo de inclinação do gráfico da força elástica em função da deformação da mola. Isso nos sugere uma metodologia de experimento para a determinação desta constante.
+
+
+
+# Objetivos
+
+* discutir um sistema massa mola;
+* caracterizar o modelo físico denominado mola ideal;
+* aplicar a lei de Hooke;
+* construir o gráfico da força elástica $F$ em função da elongação da mola $x$;
+* obter o valor da constante elástica $k$ da mola a partir do gráfico de $F$ versus $x$.
+
+
+# Material Necessário
+
+```{=html}
+<div style="display: flex; align-items: flex-start; gap: 1rem;">
+
+  <div style="flex: 0 0 40%; text-align: center;">
+    <figure>
+      <img 
+        src="../../assets/img/roteiros/fisica-2/massa-mola-mhs/equipamento.png" 
+        alt="Aparato experimental" 
+        style="width: 75%; height: auto;">
+      <figcaption style="margin-top: 0.5em;">
+        Aparato experimental
+      </figcaption>
+    </figure>
+  </div>
+
+  <div style="flex: 0 0 50%;">
+    <ul>
+      <li>sistema de sustentação principal de aço e garras de sustentação;</li>
+      <li>sistema de sustentação principal de aço e garras de sustentação;</li>
+      <li>mola e suporte para massas acopláveis;</li>
+      <li>10 anilhas acopláveis;</li>
+      <li>Régua milimetrada ou trena;</li>
+      <li>balança digital.</li>
+    </ul>
+  </div>
+
+</div>
+
+```
+
+
+
+```{=latex}
+
+\begin{minipage}{0.4\textwidth}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]
+	{../../assets/img/roteiros/fisica-2/massa-mola-mhs/equipamento.png}
+	\caption{Aparato experimental}\label{fig:equipamento}
+\end{figure}
+\end{minipage} \hfill
+\begin{minipage}{0.5\textwidth}
+\begin{itemize}
+	\item sistema de sustentação principal de aço e garras de sustentação;
+	\item sistema de sustentação principal de aço e garras de sustentação;
+	\item mola e suporte para massas acopláveis;
+	\item 10 anilhas acopláveis;
+	\item Régua milimetrada ou trena;
+	\item balança digital.
+\end{itemize}
+\end{minipage}
+
+\section{Andamento das atividades}
+
+\begin{enumerate}
+	\item Conecte o suporte à extremidade inferior da mola. Anote o comprimento inicial ($L_0$) da mola.
+	
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c}
+	\hline
+	\rowcolor{gray!30!} Comprimento Inicial $L_0$ (m)\\ \hline
+	{\color{white} massa}\\ \hline	
+	\end{tabular}
+	\end{table}
+	
+	\item Numere as anilhas acopláveis de 1 a 10. Com a balança digital, meça a massas das anilhas e anote o resultado na Tabela \ref{tab:dados}, respeitando aa ordem estabelecida. Observe que a Massa total $m$ é cumulativa.
+
+\begin{table}[H]
+\centering
+\caption{Dados do experimento}
+\begin{tabular}{c | c | c | c | c | c}
+	\hline
+	\rowcolor{gray!30!} Anilha & $L$(m) & $x = L - L_0$ (m) & Massa da anilha  (kg) & Massa total $m$ (kg) & $F = mg$ (N) \\ \hline
+	1 & & & &\\ \hline
+	\rowcolor{gray!30!} 2 & & & & & \\ \hline
+	3 & & & &\\ \hline
+	\rowcolor{gray!30!} 4 & & & & & \\ \hline
+	5 & & & &\\ \hline
+	\rowcolor{gray!30!} 6 & & & & & \\ \hline
+	7 & & & &\\ \hline
+	\rowcolor{gray!30!} 8 & & & & & \\ \hline
+	9 & & & &\\ \hline
+	\rowcolor{gray!30!} 10 & & & & & \\ \hline
+\end{tabular}
+\label{tab:dados}
+\end{table}
+
+	\item Cuidadosamente, coloque a massa 1 no suporte. Meça o comprimento da mola após a elongação. Anote o resultado na Tabela \ref{tab:dados}.\label{item:inicio}
+	
+	\item Calcule a deformação $x$ sofrida pela mola bem como a força $F = mg$ que causou esta deformação. Anote os resultados.  \label{item:fim}
+	
+	\item Repita os passos \ref{item:inicio} e \ref{item:fim} para as massas $m_2$ até $m_{10}$.
+	
+	\item Construa o gráfico da força elástica $F$ em função da elongação $x$ sofrida pela mola.
+	
+	\item Trace a reta que melhor represente a distribuição dos pontos obtidos no item anterior. A partir da inclinação do gráfico, determine a constante elástica da mola utilizada. Discuta os resultados.
+	
+	\item Discuta os resultados obtidos, justificando possíveis desvios em relação à previsão teórica.
+	
+\end{enumerate}
+
+\section*{Referências}
+
+```
+
+
+```{=html}
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Modifica o título
+  const h2 = document.querySelector(".quarto-alternate-formats h2");
+  if (h2) h2.textContent = "Roteiros disponíveis";
+
+  // Lista de objetos com os itens
+  const itens = [
+    {
+      href: "lei-de-hooke.pdf",
+      label: "Versão do Labfis"
+    },
+    {
+      href: "/experimentos-labfis-website/assets/outros-roteiros/fisica-2/Lei_de_Hooke_e_MHS_compressed.pdf",
+      label: "Versão do prof. Heverton"
+    }
+  ];
+
+  // Seleciona a ul e atualiza os itens
+  const ul = document.querySelector(".quarto-alternate-formats ul");
+  if (ul) {
+    ul.innerHTML = ""; // limpa a lista
+
+    itens.forEach(item => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = item.href;
+      a.setAttribute("data-original-href", item.href);
+      a.setAttribute("target", "_blank");
+      a.innerHTML = `<i class="bi bi-file-pdf"></i> ${item.label}`;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+  }
+});
+</script>
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
