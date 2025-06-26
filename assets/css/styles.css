@@ -10,7 +10,9 @@ html {
   font-size: 18px; /* aumenta o tamanho base de 16px para 18px */
 }
 
-
+a {
+  text-decoration: none;
+}
 
 header {
   color: var(--cor-secundaria);
