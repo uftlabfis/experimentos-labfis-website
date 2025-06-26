@@ -6,7 +6,7 @@
   --cor-escura: #060606;
 }
 
-html {
+html, h1 {
   font-size: 18px; /* aumenta o tamanho base de 16px para 18px */
 }
 
@@ -14,8 +14,13 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 24px; /* aumenta o tamanho base de 16px para 18px */
+}
+
+
 h1.title {
-  font-size: 24px;
+  font-size: 36px;
 }
 
 header {
