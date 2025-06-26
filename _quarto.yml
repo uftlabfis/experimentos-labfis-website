@@ -1,7 +1,6 @@
 project:
   type: website
   output-dir: docs
-  resources: assets/outros-roteiros
 website:
   title: "**UFTLABFIS**"
   navbar:
