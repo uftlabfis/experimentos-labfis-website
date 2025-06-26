@@ -32,7 +32,7 @@ roteiros_df <- rbind(
   data.frame(
     Área = "Física 2",
     Tema = "Queda Livre",
-    URL = '<a href="roteiros/queda-livre.html">Ver roteiro</a>'
+    URL = '<a href="roteiros/fisica-2/lei-de-hooke.html">Ver roteiro</a>'
   ),
   data.frame(
     Área = "Física 2",
