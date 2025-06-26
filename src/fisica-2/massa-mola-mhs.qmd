@@ -12,8 +12,7 @@ format:
     documentclass: article
     toc: false
     number-sections: true
-    pdf-engine: lualatex
-    citation-package: biblatex
+    pdf-engine: pdflatex
     geometry: margin=2cm
     fontsize: 12pt
     include-in-header: ../preamble.tex
@@ -51,6 +50,9 @@ csl: ../abnt.csl
 \begin{center}
   {\LARGE{Oscilações Harmônicas Simples}}
 \end{center}
+
+\setlength{\parindent}{1.25cm}
+\renewcommand{\arraystretch}{1.5}
 ``` 
 
 
@@ -61,17 +63,15 @@ csl: ../abnt.csl
 O sistema massa-mola é um modelo fundamental para o estudo do movimento oscilatório na física clássica [@halliday2]. Consiste em uma massa $m$ presa a uma mola ideal, cuja força restauradora obedece à Lei de Hooke, dada por
 
 $$
-F = -kx,
+F = - kx,
 $$
-
 onde $k$ é a constante elástica da mola e $x$ representa o deslocamento da massa em relação à posição de equilíbrio.
 
 Aplicando a Segunda Lei de Newton ao sistema, obtemos a equação diferencial que descreve o movimento da massa:
 
 $$
-m \frac{d^2 x}{dt^2} + kx = 0,
+  m \frac{d^2 x}{dt^2} + kx = 0,
 $$
-
 que é uma equação diferencial linear de segunda ordem com coeficientes constantes. Esta equação admite soluções harmônicas que representam oscilações periódicas da massa em torno da posição de equilíbrio [@halliday2].
 
 A solução geral do sistema é uma função do tempo $t$ que descreve um Movimento Harmônico Simples, com frequência angular $\omega$ dada por
@@ -93,7 +93,7 @@ k = 4 \pi^2 \dfrac{m}{T^2}
 \tag{1}\label{eq_01}
 $$
 
-Dessa forma, conhecendo o período $T$ e a massa $m$, é possível determinar experimentalmente a constante elástica $k$ da mola, realizando um experimento que mede o tempo das oscilações.
+Dessa forma, conhecendo o período $T$ e a massa $m$, é possível determinar a constante elástica $k$ da mola por meio de um experimento que mede o tempo das oscilações do sistema.
 
 
 # Objetivos
@@ -101,28 +101,8 @@ Dessa forma, conhecendo o período $T$ e a massa $m$, é possível determinar ex
 * Determinar a constante elástica de uma mola por processo dinâmico;
 * Comparar diferentes métodos de determinação de constante elástica.
 
+
 # Material Necessário
-
-
-
-```{=latex}
-\begin{minipage}{0.4\textwidth}
-\begin{figure}[H]
-	\centering
-	\caption{Aparato experimental}
-	\includegraphics[width=0.5\textwidth]
-	{../../assets/img/roteiros/fisica-2/massa-mola-mhs/equipamento.png}\label{fig_2}
-\end{figure}
-\end{minipage} \hfill
-\begin{minipage}{0.5\textwidth}
-\begin{itemize}
-	\item Mola e suporte para massas acopláveis;
-	\item 01 Massa acoplável;
-	\item Balança digital;
-	\item Cronômetro.
-\end{itemize}
-\end{minipage}
-```
 
 ```{=html}
 <div style="display: flex; align-items: flex-start; gap: 1rem;">
@@ -152,100 +132,128 @@ Dessa forma, conhecendo o período $T$ e a massa $m$, é possível determinar ex
 
 ```
 
-# Andamento das Atividades
-
-1. Com a balança digital, meça o valor da massa a ser utilizada.
-
-```{=latex}
-\begin{table}[H]
-  \centering
-  \begin{tabular}{c}
-    \hline
-    \rowcolor{gray!30!} \textbf{Massa (kg)}\\ \hline
-    {\color{white} massa}\\ \hline	
-  \end{tabular}
-\end{table}
-```
-
-::: {.only-html}
-
-<table>
-  <caption><strong>Massa Medida</strong></caption>
-  <thead>
-    <tr>
-      <th style="text-align: center;">Massa (kg)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>&nbsp;</td></tr>
-  </tbody>
-</table>
-
-:::
-
-
-2. Cuidadosamente, coloque a massa sobre o suporte da mola.
-
-3. Desloque a massa $m$ aproximadamente 2 cm de sua posição de equilíbrio e solte-a.
-
-4. Com o cronômetro, meça o tempo $t$ para que a massa execute exatamente 10 oscilações completas. Anote esse valor na tabela abaixo.
 
 
 ```{=latex}
+
+\begin{minipage}{0.4\textwidth}
+\begin{figure}[H]
+	\centering
+	\caption{Aparato experimental}\label{fig:equipamento}
+	\includegraphics[width=0.5\textwidth]
+	{../../assets/img/roteiros/fisica-2/massa-mola-mhs/equipamento.png}
+\end{figure}
+\end{minipage} \hfill
+\begin{minipage}{0.5\textwidth}
+\begin{itemize}
+	\item Mola e suporte para massas acopláveis;
+	\item 01 Massa acoplável;
+	\item Balança digital;
+	\item Cronômetro.
+\end{itemize}
+\end{minipage}
+
+\section{Andamento das atividades}
+
+\begin{enumerate}
+	\item Com a balança digital, meça o valor da massa a ser utilizada.
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c}
+	\hline
+	\rowcolor{gray!30!} Massa (kg)\\ \hline
+	{\color{white} massa}\\ \hline	
+	\end{tabular}
+	\end{table}
+	
+	\item Cuidadosamente, coloque a massa sobre o suporte da mola.
+	
+	\item Desloque a massa $m$ aproximadamente 2 cm de sua posição e equilíbrio e solte-a. \label{item:passo-3}
+	
+	\item Com o cronômetro, maça o tempo ($t$) para que a massa  execute exatamente 10 oscilações completas. Anote este resultado na Tabela \ref{tab:dados}. \label{item:passo-4}
+
 \begin{table}[H]
 \centering
 \caption{Dados do experimento}
 \begin{tabular}{c | c | c }
 	\hline
-	\rowcolor{gray!30!} Medida & Tempo de 10 oscilações ($t$) & Período $\left(T = \dfrac{t}{10}\right)$ \\ \hline
+	\rowcolor{gray!30!} Medida & Tempo de 10 oscilações ($t$) & Período $\left(T = \frac{t}{10}\right)$ \\ \hline
 	1 & & \\ \hline
 	\rowcolor{gray!30!} 2 & & \\ \hline
 	3 & & \\ \hline
 	\rowcolor{gray!30!} 4 & & \\ \hline
 	5 & & \\ \hline
-	\rowcolor{gray!30!} \multicolumn{2}{c |}{Valor médio de $T$ (s)} & \\ \hline
+	\rowcolor{gray!30!} \multicolumn{2}{c |}{Valor médio do Período $T$ (s)} & \\ \hline
 \end{tabular}
-\label{tab-01}
+\label{tab:dados}
 \end{table}
+
+	\item Repita os passos \ref{item:passo-3} e \ref{item:passo-4} mais quatro vezes, completando a Tabela \ref{tab:dados}. Calcule o valor médio dos períodos obtidos.
+	
+	\item Utilizando o valor médio de $T$ , a massa $m$ e a equação (\ref{eq_01}), determine o valor da constante elástica  da mola utilizada.
+	
+	\item \textbf{(Opcional)} Caso você tenha determinado a constante da mola usada nesta atividade através de outro experimento, por exemplo Lei de Hooke, compare os dois valores e calcule o desvio percentual entre eles.
+	
+  $$
+	  \Delta k (\%) = \dfrac{|k_{MHS} - k_{Hooke}|}{k_{Hooke}}
+	$$
+	
+\end{enumerate}
+
+\section*{Referências}
+
 ```
 
-::: {.only-html}
 
-<table>
-  <caption><strong>Dados do experimento</strong></caption>
-  <thead>
-    <tr>
-      <th>Medida</th>
-      <th>Tempo de 10 oscilações ($t$)</th>
-      <th>Período $T = \dfrac{t}{10}$</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td></td><td></td></tr>
-    <tr><td>2</td><td></td><td></td></tr>
-    <tr><td>3</td><td></td><td></td></tr>
-    <tr><td>4</td><td></td><td></td></tr>
-    <tr><td>5</td><td></td><td></td></tr>
-  </tbody>
-</table>
+```{=html}
 
-:::
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Modifica o título
+  const h2 = document.querySelector(".quarto-alternate-formats h2");
+  if (h2) h2.textContent = "Roteiros disponíveis";
+
+  // Lista de objetos com os itens
+  const itens = [
+    {
+      href: "massa-mola-mhs.pdf",
+      label: "Versão do Labfis"
+    },
+    {
+      href: "../../../assets/outros-roteiros/fisica-2/Lei_de_Hooke_e_MHS_compressed.pdf",
+      label: "Versão do prof. Heverton"
+    }
+  ];
+
+  // Seleciona a ul e atualiza os itens
+  const ul = document.querySelector(".quarto-alternate-formats ul");
+  if (ul) {
+    ul.innerHTML = ""; // limpa a lista
+
+    itens.forEach(item => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = item.href;
+      a.setAttribute("data-original-href", item.href);
+      a.setAttribute("target", "_blank");
+      a.innerHTML = `<i class="bi bi-file-pdf"></i> ${item.label}`;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+  }
+});
+</script>
 
 
-5. Repita os passos 3 e 4 mais quatro vezes, completando a Tabela 1. Calcule o valor médio dos períodos obtidos.
 
-6. Utilizando o valor médio de $T$, a massa $m$ e a equação \eqref{eq_02}, determine o valor da constante elástica $k$ da mola utilizada.
-
-7. Caso você tenha determinado a constante da mola usada nesta atividade através de outro experimento (por exemplo, a Lei de Hooke), compare os dois valores e calcule o desvio percentual entre eles:
-
-$$
-\Delta k (\%) = \dfrac{|k_{\text{MHS}} - k_{\text{Hooke}}|}{k_{\text{Hooke}}} \times 100
-$$
+```
 
 
 
 
-# Referências
+
+
+
 
 
 

@@ -1,22 +1,57 @@
-\usepackage{amsmath, amssymb, amsthm, amsfonts}
-
-\usepackage{color, colortbl}
-\usepackage{enumitem,multicol,multirow}
-\usepackage{adjustbox}
-\setlength{\parindent}{1.25cm}
-
+% --- PACOTES ESSENCIAIS ---
+\usepackage[utf8]{inputenc}             % Codificação de caracteres (obsoleto no LuaLaTeX/XeLaTeX)
+\usepackage[T1]{fontenc}                % Melhor suporte a hifenização e acentos
+\usepackage{graphicx}                   % Inclusão de imagens
+\usepackage{amsmath, amssymb, amsthm}   % Matemática avançada
+\usepackage{booktabs}                   % Tabelas profissionais
+\usepackage{array}                      % Controle avançado de tabelas
+\usepackage{enumitem}                   % Personalização de listas
+\usepackage{geometry}                   % Margens e layout da página
+\usepackage{hyperref}                   % Links e metadados (SEMPRE ÚLTIMO)
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage[position=top]{caption}
 \usepackage[labelsep=endash]{caption}
 \usepackage{float}
-
+\usepackage{color, colortbl}
+\usepackage{adjustbox}
+\usepackage{enumitem}
+\usepackage{multicol, multirow}
 \usepackage{xcolor}
+
+% --- CONFIGURAÇÕES GLOBAIS ---
+\geometry{a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm}  % Margens
 \definecolor{uftverde}{rgb}{0.0, 0.537, 0.486}
+\captionsetup[table]{skip=2pt}   % Para tabelas
+\captionsetup[figure]{skip=5pt}  % Para figuras
 
-\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+% --- ESTILOS DE LISTAS ---
+\setlist[enumerate]{
+    label=\thesection.\arabic*,
+    leftmargin=0pt,
+    itemindent=*,
+    align=left
+}
 
-% Cabeçalho e rodapé
-\usepackage{fancyhdr}
+% --- ESTILOS DE TABELAS ---
+\renewcommand{\arraystretch}{1.5}       % Altura padrão das linhas
+\setlength{\extrarowheight}{2pt}        % Espaçamento extra em tabelas
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % Coluna alinhada à esquerda
+
+
+% --- METADADOS (HIPERREF) ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Oscilações Harmônicas Simples},
+    pdfauthor={Labotório de Ensino de Física}
+}
+
+
+% --- CABEÇALHOS E RODAPÉ ---
 \pagestyle{fancy}
 
 % Desativa a linha horizontal no cabeçalho
@@ -37,4 +72,5 @@
   \vskip2pt
 }
 
+% --- REMOVE O TÍTULO AUTOMÁTICO ---
 \renewcommand{\maketitle}{}
